@@ -1,0 +1,39 @@
+//=====================================================
+
+//compile
+
+//======================================================
+
+
+// reset リセットcss
+//-----------------------------------------------------------------
+
+@import 'reset/ressjp';
+//@import 'reset/reset';
+
+
+
+// util 汎用スタイル 編集不可
+//-----------------------------------------------------------------
+@import 'util/util'; //よく使うスタイル
+@import 'util/mixin'; //凡庸mixinスタイル
+@import 'util/fontsize'; //文字のサイズを定義
+@import 'util/margin'; //marginを作成
+
+
+
+
+// base サイトのベーススタイル 調整可能
+//-----------------------------------------------------------------
+
+ //font-familyを定義
+@import 'base/fontfamily';
+
+//サイトのベーススタイルの定義
+@import 'base/base';
+
+//header content footer
+@import 'base/temp';
+
+//uilt.js関連
+@import 'base/script';

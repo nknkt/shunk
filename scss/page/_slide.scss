@@ -1,0 +1,112 @@
+//=====================================================
+
+// slide.scss
+
+//======================================================
+
+@include mq() {
+}
+@include mq(tb) {
+}
+@include mq(pc) {
+}
+@include mq(xl) {
+}
+
+//-------------------------------
+//container
+//-------------------------------
+
+#slide {
+	.slider {
+		position: relative;
+
+		img {
+			width: 100%;
+			vertical-align: bottom;
+			backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+		}
+	}
+
+	.appear {
+		animation: fadeIn 2s ease 0s 1 normal;
+		-webkit-animation: fadeIn 2s ease 0s 1 normal;
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+	}
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0.2;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@-webkit-keyframes fadeIn {
+		0% {
+			opacity: 0.2;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	.slider i {
+		&.fas {
+			color: rgba(25, 25, 25, 0.7);
+			font-size: 2.5em;
+			position: absolute;
+			top: 50%;
+			bottom: 50%;
+		}
+
+		&.fa-arrow-circle-right {
+			right: 2%;
+		}
+
+		&.fa-arrow-circle-left {
+			left: 2%;
+		}
+	}
+
+	.thumbnail ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+
+		li {
+			margin: 10px 0;
+			width: 23.5%;
+			margin-right: 2%;
+			cursor: pointer;
+			-webkit-filter: grayscale(90%);
+			filter: grayscale(90%);
+
+			&:nth-child(4n) {
+				margin-right: 0;
+			}
+
+			&:hover,
+			&.selected {
+				-webkit-filter: grayscale(0%);
+				filter: grayscale(0%);
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

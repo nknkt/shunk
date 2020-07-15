@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+//=====================================================
+
+//汎用スタイル 編集不可
+
+//======================================================
+
+/* 装飾
+-----------------------------------------------------------------*/
+
+/*上下左右中央配置*/
+
+@mixin center {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+/*リンクカラーの生成*/
+
+@mixin linkcolor($li-color) {
+	color: $li-color;
+	&:hover, &:active, &:focus {
+		color: lighten($li-color, 20%);
+	}
+}
+
+
+/* IE huck
+-----------------------------------------------------------------*/
+
+/*IE text hack*/
+
+@mixin ieLh($line-height: 1) {
+	line-height: $line-height;
+	line-height\0: ($line-height * .7);
+}
+
+/*postion: absolute;*/
+
+@mixin abs($top: auto, $right: auto, $bottom: auto, $left: auto) {}
+
+// 9px以下をchromeでも再現
+@for $font-small from 4 through 9 {
+	.font#{$font-small} {
+	font-size: 10px;
+	transform: scale(#{$font-small * 0.1});
+	display: block;
+	}
+}

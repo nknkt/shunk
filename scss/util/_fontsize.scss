@@ -1,0 +1,69 @@
+@charset "UTF-8";
+//=====================================================
+
+//文字のサイズを定義
+
+//======================================================
+
+/* font-size
+-----------------------------------------------------------------*/
+
+/*base size */
+html {
+	font-size: 62.5%; // 1remを10pxに
+	@media screen and (max-width: 1087px) {
+		font-size: 0.969932105vw;
+	}
+	@media screen and (max-width: 959px) {
+		font-size: 10px;
+	}
+}
+
+body {
+	font-size: 1.4rem;
+	line-height: 1.7;
+	letter-spacing: .1em;
+	font-feature-settings: "palt";
+	-webkit-font-feature-settings: "palt";
+	-moz-font-feature-settings: "palt";
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 900;
+}
+
+h1 {
+	font-size: 0;
+	line-height: 1.7;
+	letter-spacing: .1em;
+}
+
+h2 {
+	font-size: 3.2rem;
+	line-height: 1.7;
+	letter-spacing: .1em;
+}
+
+h3 {
+	font-size: 2.8rem;
+	line-height: 1.7;
+	letter-spacing: .1em;
+}
+
+h4 {
+	font-size: 2.4rem;
+	line-height: 1.7;
+	letter-spacing: .1em;
+}
+
+h5 {
+	font-size: 1.8rem;
+	line-height: 1.7;
+	letter-spacing: .1em;
+}
+
+h6 {
+	font-size: 1.6rem;
+	line-height: 1.7;
+	letter-spacing: .1em;
+}

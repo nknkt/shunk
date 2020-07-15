@@ -1,0 +1,95 @@
+@charset "UTF-8";
+//=====================================================
+
+//サイトのベーススタイルの定義
+
+//======================================================
+
+/* animation
+-----------------------------------------------------------------*/
+
+body {
+	animation: fadeIn 2s cubic-bezier(.47, 0, .75, .72) 0s 1 normal;
+	background: #fff;
+	color: $black;
+	overflow: hidden;
+}
+
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+/* base
+-----------------------------------------------------------------*/
+
+.container {
+	width: 100%;
+	max-width: $cont_w;
+	margin: 0 auto;
+	padding: 8rem 2rem;
+	box-sizing: border-box;
+}
+
+.inner {
+	max-width: $inn_w;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+img {
+	max-width: 100%;
+}
+
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+a {
+	color: #333;
+	text-decoration: none;
+	transition: .3s ease-out;
+	&:hover {
+		color: #e1e1e1;
+		transition: .3s ease-out;
+	}
+}
+
+
+/*.Caption
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.cap_wrap {
+	font-size: 10px;
+	line-height: 1.6em;
+	margin-bottom: 60px;
+	padding: 0;
+	p {
+		text-indent: -1em;
+		padding-left: 1em;
+	}
+}
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+hr {
+	margin-top: 3rem;
+	margin-bottom: 3.5rem;
+	border-width: 0;
+	border-top: 1px solid #e1e1e1;
+}
+
+@include mq() {
+}
+@include mq(tb) {
+}
+@include mq(pc) {
+}
+@include mq(xl) {
+}

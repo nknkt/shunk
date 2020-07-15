@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+//=====================================================
+
+//汎用スタイル 編集不可
+
+//======================================================
+
+// media query  sm,md,lg,xl
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@mixin mq($breakpoint: sp) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+// break point に合わせてdidplay: none;
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.sp, .tb {
+	display: none;
+}
+
+.pc {
+	display: block;
+}
+
+@include mq(tb) {
+	.pc {
+		display: none;
+	}
+	.tb {
+		display: block;
+	}
+}
+
+@include mq(sp) {
+	.pc {
+		display: none;
+	}
+	.sp {
+		display: block;
+	}
+}
+
+// break pointの追加
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@mixin v_break($breakpoint) {
+	@media screen and (max-width: #{$breakpoint}px){
+		.vpc#{$breakpoint}{display:none;}
+	}
+
+	@media print,screen and (min-width: #{1 + $breakpoint}px){
+		.vsp#{$breakpoint}{display:none;}
+	}
+}
+
+@include v_break(1024);

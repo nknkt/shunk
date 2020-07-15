@@ -1,0 +1,44 @@
+//=====================================================
+
+// js-drill.scss
+
+//======================================================
+
+//-------------------------------
+//container
+//-------------------------------
+
+#js-drill {
+	.container {
+		// common
+		background: #fff;
+		code {
+			display: block;
+		}
+		.sec {
+			padding: 2rem;
+			.btn {
+				color: $black;
+				width: 250px;
+				height: 50px;
+				border: 1px solid #79bbc2;
+				border-radius: 20px;
+				position: relative;
+				a {
+					@include center;
+				}
+			}
+		}
+		// &01 {
+		// }
+	}
+}
+
+@include mq() {
+}
+@include mq(tb) {
+}
+@include mq(pc) {
+}
+@include mq(xl) {
+}

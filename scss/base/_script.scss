@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+//=====================================================
+
+//script補助
+
+//======================================================
+
+/* PageTopBtn - util.js
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#PageTopBtn {
+	position: fixed;
+	bottom: 60px;
+	right: 3.5vw;
+	z-index: 1000;
+	a {
+		width: 3vw;
+		height: 3vw;
+		font-size: 1vw;
+		padding: 1vw 0;
+		display: block;
+		text-decoration: none;
+		color: #fff;
+		background: #222;
+		text-align: center;
+		border-radius: 50%;
+		outline: none;
+		&:hover {
+			text-decoration: none;
+			color: #222;
+			background: #cecece;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	#PageTopBtn a {
+		width: 10vw;
+		height: 10vw;
+		font-size: 3vw;
+		padding: 2vw 0;
+	}
+}
+@media screen and (max-width: 480px) {
+	#PageTopBtn a {
+		width: 15vw;
+		height: 15vw;
+		font-size: 7vw;
+		padding: 4vw 0;
+	}
+}
+
+/* fade - util.js
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.fade {
+	display: inline-block;
+	position: relative;
+
+	> a {
+		display: inline-block;
+		position: relative;
+	}
+
+	img {
+		transition: all 0.5s linear;
+
+		&.off {
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	&:hover img {
+		&.off {
+			opacity: 0;
+		}
+
+		&.on {
+			opacity: 1;
+		}
+	}
+
+	img.on {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		opacity: 0;
+	}
+}
+
+/* Parallax - para.js
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.para {
+	opacity: 0;
+}

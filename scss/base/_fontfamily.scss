@@ -1,0 +1,32 @@
+@charset "UTF-8";
+//=====================================================
+
+//font-familyを定義
+
+//======================================================
+
+
+/* font-family
+-----------------------------------------------------------------*/
+
+/* font */
+
+body {
+	// font-family: YakuHanJP, "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+	font-family: YakuHanJP,'Oxygen Mono', monospace, "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+}
+
+.bold {
+	/* boldの際はfont-familyでのboldをやめる */
+	font-family: "游ゴシック体", YuGothic, "Yu Gothic", sans-serif;
+	font-weight: bold;
+}
+
+.serif {
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+}
+
+.sans {
+	/* winで擦れないようウェイト込みで指定 */
+	font-family: "游ゴシック Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
+}

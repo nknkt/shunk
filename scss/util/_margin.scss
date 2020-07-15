@@ -1,0 +1,18 @@
+// OOCSS
+@for $margin from 0 through 24 {
+		.mt#{$margin * 5} {
+		margin-top: 5px * $margin;
+		}
+		.mb#{$margin * 5} {
+		margin-bottom: 5px * $margin;
+		}
+
+	@include mq(sp) {
+		.mt#{$margin * 5} {
+		margin-top: 0.5vh * $margin;
+		}
+		.mb#{$margin * 5} {
+		margin-bottom: 0.5vh * $margin;
+		}
+	}
+}

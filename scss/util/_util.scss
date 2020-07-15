@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+//=====================================================
+
+//汎用スタイル 編集不可
+
+//======================================================
+
+// Utilities
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.fl_r {
+	float: right;
+}
+
+.fl_l {
+	float: left;
+}
+
+.ta_c {
+	text-align: center;
+}
+
+.ta_l {
+	text-align: left;
+}
+
+.ta_r {
+	text-align: right;
+}
+
+
+// letter-spacing
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.ls0 {
+	letter-spacing: 0;
+}
+
+.ls20 {
+	letter-spacing: .07em;
+}
+
+.ls60 {
+	letter-spacing: .1em;
+}
+
+.ls100 {
+	letter-spacing: .2em;
+}
+
+.ls150 {
+	letter-spacing: .25em;
+}
+
+.ls200 {
+	letter-spacing: .4em;
+}
+
+
+// line-height
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.lh11 {
+	line-height: 1.1em;
+}
+
+.lh13 {
+	line-height: 1.3em;
+}
+
+.lh14 {
+	line-height: 1.4em;
+}
+
+.lh15 {
+	line-height: 1.5em;
+}
+
+.lh16 {
+	line-height: 1.6em;
+}
+
+.lh18 {
+	line-height: 1.8em;
+}
+
+// Clearing
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+// Self Clearing Goodness */
+
+.cf::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+// Hover
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.alpha {
+	transition: all .3s ease-in-out;
+	&:hover {
+		opacity: .65;
+		transition: all .3s ease-in-out;
+	}
+}
+
+.white {
+	position: relative;
+	transition: all .5s ease-in-out;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background: rgba(255, 255, 255, 0);
+		z-index: 1000;
+		transition: all .4s ease-in-out;
+	}
+	&:hover::before {
+		background: rgba(255, 255, 255, .3);
+		transition: all .6s ease-in-out;
+	}
+}
+
+/* text-shadow
+-----------------------------------------------------------------*/
+
+/* ドロップシャドウ */
+.shadow {
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+}
+
+/* 光彩 */
+.glow {
+	text-shadow: 0 0 20px #edf8ff, 0 0 15px #edf8ff, 0 0 .5px #edf8ff;
+}
+
+/* 点滅
+-----------------------------------------------------------------*/
+
+.pika {
+	@keyframes blink{
+		0%,35%,60%,100%{
+			opacity: 0;
+		}
+		
+		25%{
+			opacity: 1;
+			color:#7fff00;
+		}
+		
+		50%{
+			opacity: 1;
+			color:#0091EA;
+		}
+		
+		75%{
+			opacity: 1;
+			color:#ff1493;
+	}
+	}
+}
