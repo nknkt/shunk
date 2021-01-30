@@ -19,8 +19,8 @@ $black: #333;
 -----------------------------------------------------------------*/
 
 $breakpoints: (
-	'sp': 'screen and (max-width: 767px)',
-	'tb': 'screen and (max-width: 989px)',
-	'pc': 'screen and (max-width: 1023px)',
-	'xl': 'screen and (max-width: 1439px)',
+	"sp": "screen and (max-width: 767px)",
+	"tb": "screen and (max-width: 989px)",
+	"pc": "screen and (max-width: 1023px)",
+	"xl": "screen and (max-width: 1439px)",
 ) !default;

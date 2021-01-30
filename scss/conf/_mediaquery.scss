@@ -18,7 +18,7 @@
 // break point に合わせてdidplay: none;
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.sp, .tb {
+.sp,.tb {
 	display: none;
 }
 
@@ -48,12 +48,16 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 @mixin v_break($breakpoint) {
-	@media screen and (max-width: #{$breakpoint}px){
-		.vpc#{$breakpoint}{display:none;}
+	@media screen and (max-width: #{$breakpoint}px) {
+		.vpc#{$breakpoint} {
+			display: none;
+		}
 	}
 
-	@media print,screen and (min-width: #{1 + $breakpoint}px){
-		.vsp#{$breakpoint}{display:none;}
+	@media print,screen and (min-width: #{1 + $breakpoint}px) {
+		.vsp#{$breakpoint} {
+			display: none;
+		}
 	}
 }
 
